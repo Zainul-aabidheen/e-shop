@@ -89,51 +89,67 @@
     .header-buttons li:hover {
       transform: scale(1.1);
     }
-
-    .playlist-container {
+    
+    .ads-container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 0;
-    }
-
-    .container {
-      border: 1px solid #464646;
-      background-color: #ffffff;
-      font-family: 'Montserrat';
-      padding: 10px;
-      margin: 10px;
-      text-align: center;
-      max-width: 250px;
-      cursor: pointer;
-      border-radius: 10px;
-      transition: transform 0.2s;
-    }
-
-    .container:hover {
-      transform: scale(1.05);
-    }
-
-    .container img {
-      max-width: 100%;
-    }
-
-    .price {
-      color: #ca0202; /* Maldivian currency color */
-      text-align: left;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: 0; /* Remove the margin-top to eliminate any extra spacing */
+      margin-bottom: 20px; /* Add margin-bottom to create spacing between the ads and the item details */
+      align-self: flex-start;
     }
 
     .ad-container {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
+      background-color: #f0f0f0;
+      border: 1px solid #dbdbdb;
+      padding: 10px;
+      margin-top: 0; /* Remove margin-top to eliminate spacing */
+      margin-bottom: 10px; /* Add margin-bottom for spacing between ads */
+    } 
+
+    .ad-container img {
+      max-width: 100%;
+      height: auto;
     }
 
-    .ad-image {
-      width: 1000px;
-      height: 250px;
-      cursor: pointer;
+    .item-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: left;
+      display: flex;
+      align-items: center;
     }
+
+    .item-details img {
+      max-width: 300px;
+      margin-right: 20px;
+    }
+
+    .item-details-content {
+      flex: 1;
+    }
+
+    .item-details h2 {
+      font-size: 28px;
+      margin: 10px 0;
+    }
+
+    .item-details .price {
+      color: #ca0202;
+      margin-top: 10px;
+    }
+
+    .item-details p {
+      margin-top: 20px;
+    }
+
+    .call-to-buy {
+      color: #ca0202;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+    }  
 
     .footer-section {
       display: inline-block;
@@ -164,12 +180,12 @@
       margin: 0;
     }
   </style>
-  <title>E-Shop</title>
+  <title>Used NMAX cycle with few broken parts | E-Shop</title>
 </head>
 <body>
   <header>
     <div class="logo-container">
-        <a href="./index" class="logo-text">E-Shop</a>
+        <a href="./html" class="logo-text">E-Shop</a>
       </div>
     <div class="header-buttons">
       <ul>
@@ -180,33 +196,24 @@
   </header>
 
   <main>
-    <div class="ad-container">
-      <a href="https://dhiraagu.mv">
-        <img src="https://i.postimg.cc/VNP7GtqN/news-image-54538.jpg" alt="Advertisement" class="ad-image">
-      </a>
-    </div>
-    <div class="playlist-container">
-      <!-- Sample Item Container -->
-      <div class="container" onclick="window.location.href='./1';">
-        <img src="https://i.postimg.cc/KzhWMqgj/Untitled-design.png" alt="Item 1">
-        <h3>Used New Suzuki GN Motorcycle</h3>
-        <p class="price">MVR 40,000</p>
-      </div>
-      <div class="container" onclick="window.location.href='./2';">
-        <img src="https://i.postimg.cc/3wbfc57N/item.png" alt="Item 1">
-        <h3>Honda Wave Used for a year</h3>
-        <p class="price">MVR 10,000</p>
-      </div>
-      <div class="container" onclick="window.location.href='./3';">
-        <img src="https://i.postimg.cc/kXxZXpNY/item-1.png" alt="Item 1">
-        <h3>REGISTERED Honda N-One Premium car</h3>
-        <p class="price">MVR 165,000</p>
-      </div>
-      <!-- Repeat similar containers for other items -->
-      <div class="container" onclick="window.location.href='./4';">
-        <img src="https://i.postimg.cc/MH8wDHs2/NMAX.jpg" alt="Item 4">
-        <h3>Used NMAX cycle with few broken parts</h3>
+    <div class="item-details">
+      <img src="https://i.postimg.cc/MH8wDHs2/NMAX.jpg" alt="Item 1">
+      <div class="item-details-content">
+        <h2>Used NMAX cycle with few broken parts</h2>
         <p class="price">MVR 25,350</p>
+        <p>
+          I've used for couple of years now. Remort controled cycle. Needs some fixing before it can be drived. Got in to an accident and broke the head lights, front cover and silencer. Engine have been broken 2 time but now its been a while since i last fixed the engine.
+        </p>
+        <p class="call-to-buy">Call 7471289 to buy item</p>
+      </div>
+    </div>
+    
+    <div class="ads-container">
+      <div class="ad-container">
+        <img src="https://i.postimg.cc/4xxwFLG3/300-x-250-example.jpg" alt="Ad 1">
+      </div>
+      <div class="ad-container">
+        <img src="https://i.postimg.cc/SNqgcQtC/300-x-600-example.jpg" alt="Ad 2">
       </div>
     </div>
   </main>
